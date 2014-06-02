@@ -1,0 +1,33 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+
+sourceCompatibility = 1.7
+version = '1.0'
+
+repositories {
+    maven { url 'http://repo.spring.io/libs-snapshot' }
+    mavenCentral()
+}
+
+jar {
+    baseName = 'ffbdh'
+    version = '0.1.0'
+}
+
+configurations {
+    compile
+}
+
+dependencies {
+    compile 'org.jsoup:jsoup:1.7.3'
+    compile 'joda-time:joda-time:2.2'
+    compile 'org.springframework:spring-beans:4.0.5.RELEASE'
+    compile 'org.springframework:spring-context:4.0.5.RELEASE'
+    compile 'org.springframework:spring-core:4.0.5.RELEASE'
+    compile 'org.springframework.data:spring-data-mongodb:1.5.0.RELEASE'
+    compile 'org.springframework.boot:spring-boot-starter-data-mongodb'
+    compile 'org.springframework.boot:spring-boot-gradle-plugin:1.0.2.RELEASE'
+    compile 'org.springframework.boot:spring-boot-autoconfigure:1.0.2.RELEASE'
+    compile 'org.springframework.data:spring-data-commons-core:1.4.1.RELEASE'
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}

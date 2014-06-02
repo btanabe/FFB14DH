@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: spring-boot-loader-tools-1.0.2.RELEASE">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-loader-tools/1.0.2.RELEASE/77b0734d7df9bf2e5ce202dcfca77aaabcdf4d57/spring-boot-loader-tools-1.0.2.RELEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-loader-tools/1.0.2.RELEASE/269863767ef3215342288ef2843eeb74016776d1/spring-boot-loader-tools-1.0.2.RELEASE-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

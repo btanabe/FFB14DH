@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/integration"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:beans="http://www.springframework.org/schema/beans"
+             xsi:schemaLocation="http://www.springframework.org/schema/beans
+                  http://www.springframework.org/schema/beans/spring-beans.xsd
+                  http://www.springframework.org/schema/integration
+                  http://www.springframework.org/schema/integration/spring-integration.xsd">
+
+    <!--&lt;!&ndash; Creates NflPlayerDataProvider, populates it with all scrapers, and starts the scraping/aggregating process &ndash;&gt;-->
+    <!--<beans:bean id="nflPlayerDataProvider" class="com.tanabe.dh.dataproviders.NflPlayerDataProvider">-->
+        <!--<beans:property name="nflDotComRosterScraper" ref="rosterScraper"></beans:property>-->
+        <!--<beans:property name="nflCombineResultsDotComScraper" ref="fortyTimeScraper"></beans:property>-->
+    <!--</beans:bean>-->
+
+    <!--&lt;!&ndash; Creates NflDotComRosterScraper and scrapes for player roster info &ndash;&gt;-->
+    <!--<beans:bean id="rosterScraper" class="com.tanabe.dh.scrapers.impl.NflDotComRosterScraper" init-method="getPlayerRosterDataForAllPlayers"></beans:bean>-->
+
+    <!--&lt;!&ndash; Creates NflCombineResultsDotComScraper, populates it with pre-parsed NFL players from NflDotComRosterScraper, and scrapes for 40 times &ndash;&gt;-->
+    <!--<beans:bean id="fortyTimeScraper" class="com.tanabe.dh.scrapers.impl.NflCombineResultsDotComScraper" init-method="scrapeFortyTimes">-->
+        <!--<beans:property name="playerToScrapeFortyTimesFor" value="#{rosterScraper.players}"></beans:property>-->
+    <!--</beans:bean>-->
+
+    <!-- Configures DatabaseInterface, connects to database -->
+    <beans:bean id="databaseInterface" class="com.tanabe.dh.web.database.DatabaseInterface" init-method="connectToDatabase">
+        <beans:property name="userInterface" ref="commandLineInterface"></beans:property>
+        <beans:property name="databaseAddress" value="10.3.14.71"></beans:property>
+        <beans:property name="databasePort" value="27017"></beans:property>
+        <beans:property name="databaseName" value="ffb14db"></beans:property>
+    </beans:bean>
+
+    <!-- Creates CommandLineView -->
+    <beans:bean id="commandLineInterface" class="com.tanabe.dh.ui.view.CommandLineView"></beans:bean>
+
+    <!-- Creates GraphicalUserInterface -->
+    <beans:bean id="graphicalInterface" class="com.tanabe.dh.ui.view.GraphicalUserInterfaceView"></beans:bean>
+
+</beans:beans>
