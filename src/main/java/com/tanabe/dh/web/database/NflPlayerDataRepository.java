@@ -14,7 +14,7 @@ import java.util.List;
 @Repository
 public interface NflPlayerDataRepository extends MongoRepository<NflPlayerData, String> {
 
-    public NflPlayerData findById(String id);
+//    public NflPlayerData findById(String id);
     public List<NflPlayerData> findByPlayerFirstName(String playerFirstName);
     public List<NflPlayerData> findByPlayerLastName(String playerLastName);
     public List<NflPlayerData> findByPosition(Position position);

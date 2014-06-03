@@ -39,7 +39,6 @@
     <orderEntry type="library" exported="" name="Gradle: aopalliance-1.0" level="project" />
     <orderEntry type="library" exported="" name="Gradle: spring-aop-4.0.5.RELEASE" level="project" />
     <orderEntry type="library" exported="" name="Gradle: spring-expression-4.0.5.RELEASE" level="project" />
-    <orderEntry type="library" exported="" name="Gradle: mongo-java-driver-2.12.1" level="project" />
     <orderEntry type="library" exported="" name="Gradle: slf4j-api-1.7.7" level="project" />
     <orderEntry type="library" exported="" name="Gradle: jcl-over-slf4j-1.7.7" level="project" />
     <orderEntry type="library" exported="" name="Gradle: unresolved_dependency___org_springframework_boot_spring_boot_starter_data_mongodb_" level="project" />
@@ -52,6 +51,7 @@
     <orderEntry type="library" exported="" name="Gradle: spring-data-commons-1.8.0.RELEASE" level="project" />
     <orderEntry type="library" exported="" name="Gradle: spring-boot-autoconfigure-1.0.2.RELEASE" level="project" />
     <orderEntry type="library" exported="" name="Gradle: spring-boot-1.0.2.RELEASE" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: mongo-java-driver-2.12.2" level="project" />
   </component>
 </module>
 

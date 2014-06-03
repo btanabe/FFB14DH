@@ -13,7 +13,7 @@ public class Application {
         System.out.println("Application started: " + DateHelper.getHumanReadableDateAndTimeMMddyyyyHHmmss());
 
         ApplicationContext context = new ClassPathXmlApplicationContext("spring-integration.xml");
-        DatabaseInterface databaseInterface = context.getBean("databaseInterface", DatabaseInterface.class);
+//        DatabaseInterface databaseInterface = context.getBean("databaseInterface", DatabaseInterface.class);
 
 
         /*

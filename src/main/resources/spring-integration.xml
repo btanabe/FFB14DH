@@ -27,4 +27,19 @@
 
     <!-- Creates GraphicalUserInterface -->
     <beans:bean id="graphicalInterface" class="com.tanabe.dh.ui.view.GraphicalUserInterfaceView"></beans:bean>
+
+    <!-- Mongo Database -->
+    <mongo:mongo id="mongo" host="10.3.14.71" port="27017"/>
+    <mongo:db-factory dbname="ffb14db"/>
+
+    <beans:bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
+        <beans:constructor-arg name="mongoDbFactory" ref="mongoDbFactory"/>
+    </beans:bean>
+
+    <!-- Creates ApplicationConfig -->
+    <beans:bean id="applicationConfig" class="com.tanabe.dh.web.database.ApplicationConfig">
+        <beans:property name="databaseHostAddress" value="10.3.14.71"/>
+        <beans:property name="databasePort" value="27017"/>
+        <beans:property name="databaseName" value="ffb14db"/>
+    </beans:bean>
 </beans:beans>
